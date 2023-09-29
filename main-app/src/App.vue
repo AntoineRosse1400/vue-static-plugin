@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { FrameworkModel } from 'vue-framework-test';
+import { ref } from 'vue';
 
+const model: FrameworkModel = new FrameworkModel();
+model.BaseMessage = 'This is the framework component!';
+const refModel = ref(model);
 </script>
 
 <template>
@@ -11,7 +16,7 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <framework msg="This is the framework component!" />
+  <framework-view :model="refModel" />
 </template>
 
 <style scoped>

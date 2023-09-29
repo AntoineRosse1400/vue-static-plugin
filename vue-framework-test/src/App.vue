@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import Framework from './components/Framework.vue'
+import FrameworkView from './components/FrameworkView.vue'
+import { FrameworkModel } from './model/FrameworkModel';
+
+const model: FrameworkModel = new FrameworkModel();
+model.BaseMessage = 'Test message';
 </script>
 
 <template>
@@ -11,7 +15,7 @@ import Framework from './components/Framework.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <framework msg="This is a framework component" />
+  <framework-view :model="model" />
 </template>
 
 <style scoped>

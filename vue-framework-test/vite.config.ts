@@ -18,7 +18,7 @@ export default defineConfig({
           declarationMap: true,
         },
       },
-      exclude: ['vite.config.ts'],
+      exclude: ['vite.config.ts', 'main.ts'],
     }),
   ],
   build: {
@@ -26,7 +26,7 @@ export default defineConfig({
     lib: {
       entry: './src/Framework.ts',
       formats: ['es', 'cjs'],
-      name: 'ViewerPlugin',
+      name: 'Framework',
       fileName: (format) => format === 'es' ? 'index.js' : 'index.cjs'
     },
     rollupOptions: {

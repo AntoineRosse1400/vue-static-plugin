@@ -1,11 +1,13 @@
 // Entrypoint of plugin system
 import type { App } from 'vue';
-import { Framework } from './components';
+import { FrameworkView } from './components';
+import { FrameworkModel } from './model/FrameworkModel';
 
 export default {
-    install: (app: App) => {
-        app.component("Framework", Framework);
-    }
-}
+  install: (app: App) => {
+    app.component('FrameworkView', FrameworkView);
+  },
+};
 
-export { Framework };
+export { FrameworkView };
+export { FrameworkModel };

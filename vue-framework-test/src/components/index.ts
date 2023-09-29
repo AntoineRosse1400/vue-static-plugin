@@ -1,1 +1,1 @@
-export { default as Framework } from './Framework.vue'
+export { default as FrameworkView } from './FrameworkView.vue';

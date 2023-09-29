@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.3.4",
-    "vue-framework-test": "^0.0.2"
+    "vue-framework-test": "^0.0.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
