@@ -1,0 +1,1 @@
+export { default as PluginView } from './PluginView.vue'

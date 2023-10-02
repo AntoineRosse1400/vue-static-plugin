@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import PluginView from './components/PluginView.vue'
+import { PluginModel } from './model/PluginModel'
+
+const model: PluginModel = new PluginModel();
+model.BaseMessage = 'Base message';
+model.PluginMessage = 'Plugin message';
 </script>
 
 <template>
@@ -11,7 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <plugin-view :model="model" />
 </template>
 
 <style scoped>
