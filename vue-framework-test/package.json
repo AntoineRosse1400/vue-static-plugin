@@ -2,6 +2,8 @@
   "name": "vue-framework-test",
   "version": "0.0.10",
   "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./styles.css": "./dist/style.css"
@@ -9,14 +11,17 @@
   "browser": {
     "./styles.css": "./dist/style.css"
   },
-  "types": "./dist/ViewerPlugin.d.ts",
+  "types": "dist/FrameworkExporter.d.ts",
+  "license": "Apache-2.0",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "vue": "^3.3.4"

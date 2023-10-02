@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url';
+import { fileURLToPath, URL } from 'url';
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -24,9 +24,9 @@ export default defineConfig({
   build: {
     cssCodeSplit: false,
     lib: {
-      entry: './src/Framework.ts',
+      entry: './src/FrameworkExporter.ts',
       formats: ['es', 'cjs'],
-      name: 'Framework',
+      name: 'FrameworkExporter',
       fileName: (format) => format === 'es' ? 'index.js' : 'index.cjs'
     },
     rollupOptions: {
